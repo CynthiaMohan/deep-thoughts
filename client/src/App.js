@@ -8,7 +8,8 @@ import Home from './pages/Home';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3001/graphql',
+  "proxy": "http://localhost:3001",
+  uri: '/graphql',
 });
 
 const client = new ApolloClient({
